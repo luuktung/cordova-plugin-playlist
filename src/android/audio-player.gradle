@@ -6,7 +6,7 @@ repositories {
 
 dependencies {
   // AndroidX Annotations
-  implementation 'androidx.annotation:annotation:1.1.0' 
+  implementation 'androidx.annotation:annotation:1.1.0'
 
   // ExoPlayer
   implementation "com.google.android.exoplayer:exoplayer-core:2.6.1"
@@ -17,7 +17,7 @@ dependencies {
 
   // ExoMedia
   implementation "com.devbrackets.android:exomedia:4.1.0"
-  implementation "com.devbrackets.android:playlistcore:2.0.1"
+  implementation "com.devbrackets.android:playlistcore:2.1.0"
 
   // Image Loading
   implementation "com.github.bumptech.glide:glide:4.9.0"
