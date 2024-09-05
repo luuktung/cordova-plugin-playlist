@@ -46,11 +46,14 @@
       <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
       <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> -->
       <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+      <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"/>
     </config-file>
 
     <config-file target="AndroidManifest.xml" parent="/manifest/application">
-      <service android:name="com.rolamix.plugins.audioplayer.service.MediaService"></service>
+      <service android:name="com.rolamix.plugins.audioplayer.service.MediaService"
+               android:foregroundServiceType="mediaPlayback" />
     </config-file>
+
 
     <!-- ExoMedia requires an application to instantiate the playlist service.
          This is because even when the cordova activity goes out of scope
@@ -59,8 +62,9 @@
          Due to a bug in Cordova, this cannot be added via plugin.xml using <edit-config>; instead
          the plugin install/uninstall scripts manages this.
     -->
-
+<!--
     <dependency id="cordova-support-google-services" version="~1.2.0"/>
+-->
 
     <framework src="com.android.support:support-v4:27.+" />
     <framework src="com.android.support:support-media-compat:27.+" />
